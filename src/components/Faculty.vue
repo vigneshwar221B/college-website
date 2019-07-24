@@ -1,6 +1,6 @@
 <template>
 <div>
-<toolbar  :title="title" :show="true"></toolbar>
+<!-- <toolbar  :title="title" :show="true"></toolbar> -->
 <div class="bk" id="fk1">
 <v-flex display-1 text-xs-center><v-container style="color:black;text-align:center">The department of CSE currently has an active and energetic team of near 38 faculty members with diverse educational backgrounds and academic experiences. They are embarking on a journey of building a future world.</v-container></v-flex>
 <div>
@@ -78,7 +78,12 @@ export default {
      data () {
       return {
         title: 'CSE DEPARTMENT',
-      }},
+      }
+      },
+
+      created(){
+        
+      }
 }
 </script>
 

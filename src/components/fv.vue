@@ -18,14 +18,14 @@
         xs12
       >
            <h1>HEAD OF THE DEPARTMENT<br /></h1>    
-            Dr.A.Balamurugan,<br />
-            HOD - CSE Department,<br />
+            {{ nme }},<br />
+            HOD - {{ dep }},<br />
             Sri Krishna College Of Technology,<br />
             Kovaipudur,<br />
             Coimbatore-42.<br />
             <br />
-            EMAIL: a.balamurugan@skct.edu.in <br />
-            PHONE: 9443621770 <br />
+            EMAIL: {{ email }}<br />
+            PHONE: {{no}} <br />
         </v-flex>  
         <v-flex>
         <v-divider></v-divider>  
@@ -61,15 +61,15 @@
         white--text
         xs12
       >
-           <h1>HEAD OF THE DEPARTMENT<br /></h1>    
-            Dr.A.Balamurugan,<br />
-            HOD - CSE Department,<br />
+          <h1>HEAD OF THE DEPARTMENT<br /></h1>    
+            {{ nme }},<br />
+            HOD - {{ dep }},<br />
             Sri Krishna College Of Technology,<br />
             Kovaipudur,<br />
             Coimbatore-42.<br />
             <br />
-            EMAIL: a.balamurugan@skct.edu.in <br />
-            PHONE: 9443621770 <br />
+            EMAIL: {{ email }}<br />
+            PHONE: {{no}} <br />
         </v-flex>  
         <v-flex>
         <v-divider></v-divider>  
@@ -90,7 +90,9 @@
 </template>
 
 <script>
-
+export default{
+  props:['nme', 'dep', 'email', 'no']
+}
 </script>
 
 <style>
