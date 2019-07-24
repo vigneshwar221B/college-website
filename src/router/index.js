@@ -10,7 +10,7 @@ import gallery from '@/components/gallery.vue'
 import event_page from '@/components/event_page.vue'
 import coe from '@/components/coe.vue'
 import index from '@/components/index.vue'
-
+import overview from '@/components/overview.vue'
 
 Vue.use(Router)
 
@@ -20,6 +20,11 @@ export default new Router({
       path: '/index',
       name: 'index',
       component: index
+    },
+    {
+      path: '/overview',
+      name: 'overview',
+      component:overview
     },
     {
       path: '/',

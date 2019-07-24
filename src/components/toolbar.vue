@@ -211,7 +211,7 @@ export default {
             { title: "rules and Regulations"},
       ],
      itemsus: [
-            { title: "overview"},
+            { title: "overview",route:'/overview'},
             { title: "management"}            
       ],
        itemsalumini: [
@@ -255,7 +255,7 @@ export default {
           { dis: "Database",icon: "person"},  
         ]},
         { title: "About Us", sub:[
-          { dis: "overview",icon: "360"},
+          { dis: "overview",icon: "360",route:'/overview'},
           { dis : "management",icon: "360"}
         ]},
         
