@@ -3,34 +3,15 @@
     <v-flex >
     <v-content>
     <v-toolbar fixed height="57" flat="" dark app class="indigo accent-4 hidden-sm-and-down">
-      <v-toolbar-side-icon><img class="image" width="40px" src="../assets/cn2.png" ></v-toolbar-side-icon>
-      <v-toolbar-title >SKCT - {{ title }}</v-toolbar-title>
+      <v-toolbar-side-icon @click="$router.push('/index')"><img class="image" width="40px" src="../assets/cn2.png" ></v-toolbar-side-icon>
+      <v-toolbar-title>SKCT  {{ title }}</v-toolbar-title>
        <v-divider
             class="mx-3"
             inset
             vertical
             ></v-divider>
       <v-toolbar-items>
-            <v-btn flat @click="$router.push('/')" >HOME</v-btn>
-               <v-menu class="py-5" open-on-hover bottom  offset-y offset-overflow>
-               <template v-slot:activator="{ on }">
-                  <v-btn
-                flat=""
-                v-on="on"
-                >
-                ABOUT US
-                </v-btn>
-            </template>
-            <v-list>
-                <v-list-tile
-                v-for="(item, index) in itemsus"
-                 router :to="item.route"
-                :key="index"
-                >
-                <v-list-tile-title>{{ item.title }}</v-list-tile-title>
-                </v-list-tile>
-            </v-list>
-          </v-menu>
+              
             <v-btn flat>ADMISSION</v-btn>
             <v-btn @click="$router.push('/coe')"  flat>COE</v-btn>
             <v-btn flat>Skct @ Glance</v-btn>
@@ -66,6 +47,25 @@
             <v-list>
                 <v-list-tile
                 v-for="(item, index) in items"
+                 router :to="item.route"
+                :key="index"
+                >
+                <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+                </v-list-tile>
+            </v-list>
+          </v-menu>
+           <v-menu class="py-5" open-on-hover bottom  offset-y offset-overflow>
+               <template v-slot:activator="{ on }">
+                  <v-btn
+                flat=""
+                v-on="on"
+                >
+                ABOUT US
+                </v-btn>
+            </template>
+            <v-list>
+                <v-list-tile
+                v-for="(item, index) in itemsus"
                  router :to="item.route"
                 :key="index"
                 >

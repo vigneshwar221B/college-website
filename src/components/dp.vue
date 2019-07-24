@@ -25,91 +25,53 @@
          > UPCOMING EVENT</strong></u></h2></div>
       </v-flex>
 
-
-<v-card class="py-5 elevation-0"> 
-    <v-card-media class="swiper-inner">
-        <swiper :options="swiperOption">
-          
-           <v-card class="px-2 mx-4 rd elevation-3 swiper-slide" style="width: 18rem;">
-              <v-card-media class="px-2 py-3">
-                <img src="http://skct.edu.in/img/news/CHALLENGE_IOT.jpg"  style="height:160px;" alt="...">
-              </v-card-media>
-                <v-card-text>
-
-                  <h5 class="card-title">Cloud Literacy-Learnathon</h5>
-
-                  <p class="card-text">Cloud Literacy Event on 23rd October 2018</p>
-
-                  <v-btn outline round color="blue" small @click="$router.push('/event_page')">more..</v-btn>
-                </v-card-text>
-          </v-card> 
-            <v-card class="px-2 mx-4 rd elevation-3 swiper-slide" style="width: 18rem;">
-              <v-card-media class="px-2 py-3">
-                <img src="http://skct.edu.in/img/news/CHALLENGE_IOT.jpg"  style="height:160px;" alt="...">
-              </v-card-media>
-                <v-card-text>
-
-                  <h5 class="card-title">Cloud Literacy-Learnathon</h5>
-
-                  <p class="card-text">Cloud Literacy Event on 23rd October 2018</p>
-                  <v-btn outline round color="blue" small @click="$router.push('/event_page')">more..</v-btn>
-                </v-card-text>
-          </v-card> 
-            <v-card class="px-2 mx-4 rd elevation-3 swiper-slide" style="width: 18rem;">
-              <v-card-media class="px-2 py-3">
-                <img src="http://skct.edu.in/img/news/CHALLENGE_IOT.jpg"  style="height:160px;" alt="...">
-              </v-card-media>
-                <v-card-text>
-
-                  <h5 class="card-title">Cloud Literacy-Learnathon</h5>
-
-                  <p class="card-text">Cloud Literacy Event on 23rd October 2018</p>
-
-                  <v-btn outline round color="blue" small @click="$router.push('/event_page')">more..</v-btn>
-                </v-card-text>
-          </v-card> 
-            <v-card class="px-2 mx-4 rd elevation-3 swiper-slide" style="width: 18rem;">
-              <v-card-media class="px-2 py-3">
-                <img src="http://skct.edu.in/img/news/CHALLENGE_IOT.jpg"  style="height:160px;" alt="...">
-              </v-card-media>
-                <v-card-text>
-
-                  <h5 class="card-title">Cloud Literacy-Learnathon</h5>
-
-                  <p class="card-text">Cloud Literacy Event on 23rd October 2018</p>
-
-                  <v-btn outline color="blue" round small @click="$router.push('/event_page')">more..</v-btn>
-                </v-card-text>
-          </v-card>
-      </swiper>
-    </v-card-media>
+<!-- events -->
+<template>
+  <v-card
+    elevation="24"
+     width="500px"
+    class="mx-auto"
+  >
+    <v-carousel
+      :continuous="false"
+       cycle
+      :show-arrows="false"
+      hide-delimiter-background="true"
+      delimiter-icon="minimize"
+      height="300"
+    >
+      <v-carousel-item
+        v-for="(slide, i) in slides"
+        :key="i"
+      >
+        <v-sheet
+          :color="colors[i]"
+          height="100%"
+          tile
+        >
+          <v-layout
+            align-center
+            fill-height
+            justify-center
+          >
+            <div class="display-3">{{ slide }} Slide</div>
+          </v-layout>
+        </v-sheet>
+      </v-carousel-item>
+    </v-carousel>
+           <v-list two-line>
+      <v-list-item>
+        <v-list-item-content>
+          <v-list-item-title>John Leider</v-list-item-title>
+          <v-list-item-subtitle>Author</v-list-item-subtitle>
+        </v-list-item-content>
+        <v-list-item-action>
+        </v-list-item-action>
+      </v-list-item>
+    </v-list>
   </v-card>
-
-
-<v-layout hidden-md-and-up>
- <v-flex xs12 mx-3 md4>
-                  <div data-aos="zoom-in">
-                   <v-card >
-                  <v-img
-                    src="http://skct.edu.in/img/news/CHALLENGE_IOT.jpg"
-                  ></v-img>
-            <v-card-text>
-
-                  <h5 class="card-title">Cloud Literacy-Learnathon</h5>
-
-                  <p class="card-text">Cloud Literacy Event on 23rd October 2018</p>
-
-                  <v-btn outline color="blue" round small @click="$router.push('/event_page')">more..</v-btn>
-                </v-card-text>
-      </v-card>
-    </div>
-</v-flex>
-</v-layout>
-
-
-
-
-
+</template>
+<!-- <event end -->
     
      <section>
         <v-layout
@@ -510,41 +472,30 @@
 import toolbar from './toolbar.vue'
 import fv from './fv'
 import footnav from './footnav.vue'
-import 'swiper/dist/css/swiper.css';
-
-import 'swiper/dist/js/swiper.js';
-
-import { swiper, swiperSlide } from 'vue-awesome-swiper';
-
-
 export default {
     components: {
-     toolbar,
-       swiper,
-footnav,
-    swiperSlide,
-    fv
+     toolbar,footnav,fv
   },
+
    data(){
        return{
-         title: 'CSE DEPARTMENT',
-         swiperOption: {
+         title: '- CSE DEPARTMENT',
+        colors: [
+        'green',
+        'secondary',
+        'yellow darken-4',
+        'red lighten-2',
+        'orange darken-1',
+      ],
+      cycle: false,
+      slides: [
+        'First',
+        'Second',
+        'Third',
+        'Fourth',
+        'Fifth',
+      ],
 
-          grabCursor: true,
-
-          centeredSlides: true,
-
-          slidesPerView: 'auto',
-
-         
-          autoplay:{
-
-            delay:2500,
-
-            disableOnInteraction:false,
-
-          }
-        },
          ex:[
            { title : "Achievements",sub:['Department','Faculty','Student']},
            { title: "Placement Statitcs",sub:['2014-2015','2015-2016','2016-2017','2017-2018','2018-2019','2019-2020']}

@@ -4,7 +4,7 @@
   <v-footer
     height="auto"
     class="mb-5 hidden-md-and-up"
-    color="indigo accent-3"
+    color="indigo lighten"
   >
       <v-layout
       justify-center
@@ -90,9 +90,7 @@
 </template>
 
 <script>
-export default {
 
-}
 </script>
 
 <style>

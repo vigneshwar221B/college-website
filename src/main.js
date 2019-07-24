@@ -7,9 +7,9 @@ import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css' // Ensure you are using css-loader
 import Aos from 'aos'
 import 'aos/dist/aos.css'
-import VueYouTubeEmbed from 'vue-youtube-embed'
-Vue.use(VueYouTubeEmbed)
-Vue.use(VueYouTubeEmbed, { global: true })
+// import VueYouTubeEmbed from 'vue-youtube-embed'
+// Vue.use(VueYouTubeEmbed)
+// Vue.use(VueYouTubeEmbed, { global: true })
 Vue.use(Vuetify)
 
 

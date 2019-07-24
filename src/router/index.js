@@ -9,12 +9,18 @@ import contact from '@/components/contact.vue'
 import gallery from '@/components/gallery.vue'
 import event_page from '@/components/event_page.vue'
 import coe from '@/components/coe.vue'
+import index from '@/components/index.vue'
 
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
+    {
+      path: '/index',
+      name: 'index',
+      component: index
+    },
     {
       path: '/',
       name: 'dp',
