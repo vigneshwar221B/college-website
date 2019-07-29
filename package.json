@@ -11,8 +11,17 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.8",
+    "@fortawesome/fontawesome-free-brands": "^5.0.13",
+    "@fortawesome/fontawesome-free-solid": "^5.0.13",
+    "@fortawesome/fontawesome-svg-core": "^1.2.19",
+    "@fortawesome/vue-fontawesome": "^0.1.6",
     "aos": "^2.3.4",
+<<<<<<< HEAD
     "bootstrap": "^4.3.1",
+=======
+    "axios": "^0.19.0",
+>>>>>>> b1d63829f551a509ba318d00a65bd90520948ef6
     "countup.js": "^2.0.4",
     "jquery": "^3.4.1",
     "popper.js": "^1.15.0",

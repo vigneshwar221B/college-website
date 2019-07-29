@@ -1,11 +1,16 @@
 <template>
 <div>
+<<<<<<< HEAD
 <toolbar  :tool_name="title" :show="true"></toolbar>
 <div data-aos="fade-in" data-aos-duration="3000">
         <v-flex mt-3>
           <h2><strong>Department Faculties</strong></h2>
         </v-flex>
         </div>
+=======
+<!-- <toolbar  :title="title" :show="true"></toolbar> -->
+<div class="bk" id="fk1">
+>>>>>>> b1d63829f551a509ba318d00a65bd90520948ef6
 <v-flex display-1 text-xs-center><v-container style="color:black;text-align:center">The department of CSE currently has an active and energetic team of near 38 faculty members with diverse educational backgrounds and academic experiences. They are embarking on a journey of building a future world.</v-container></v-flex>
 
 <v-container fluid>
@@ -52,6 +57,7 @@ export default {
   },
      data () {
       return {
+<<<<<<< HEAD
         title: '- CSE DEPARTMENT',
         name : 'a.balamurugan',
         proffesion: 'hod',
@@ -61,6 +67,15 @@ export default {
         card_bck: ''
 
       }},
+=======
+        title: 'CSE DEPARTMENT',
+      }
+      },
+
+      created(){
+        
+      }
+>>>>>>> b1d63829f551a509ba318d00a65bd90520948ef6
 }
 </script>
 

@@ -1,8 +1,14 @@
 <template>
 <v-app>
+<<<<<<< HEAD
   <toolbar :tool_name="title" :show="true"></toolbar>
        <div style="z-index:0;postion:fixed;">
         <v-img :src="require('@/assets/clg.png')" id="fp" class="sk">
+=======
+  <!-- <toolbar :title="title" :show="true"></toolbar> -->
+       <section>
+        <v-img :src="bgimage" id="fp"  class="sk">
+>>>>>>> b1d63829f551a509ba318d00a65bd90520948ef6
           <v-layout
             column
             align-center
@@ -75,9 +81,14 @@
           <v-container>
           <v-flex text-xs-center>
 <div data-aos="zoom-in">
+<<<<<<< HEAD
           <p style="font-size:17px;text-align:justify">
             {{ about_dpt }} 
               </p>
+=======
+          <p style="font-size:17px;text-align:justify"> 
+              {{about_desc}}</p>
+>>>>>>> b1d63829f551a509ba318d00a65bd90520948ef6
 </div>
           </v-flex>
           </v-container>
@@ -97,8 +108,13 @@
                     </v-card-title>
                     <v-card-text>
                       <v-layout>
+<<<<<<< HEAD
                       <p style="font-size:17px;text-align:justify">
                         {{ dpt_vision }}</p>
+=======
+                      <p style="font-size:17px;text-align:justify">{{vision_desc}}
+            </p>
+>>>>>>> b1d63829f551a509ba318d00a65bd90520948ef6
                       </v-layout>
                     </v-card-text>
                   </v-card>
@@ -139,11 +155,16 @@
                     <v-card-text>
                       <v-layout>
                         <p style="font-size:17px;text-align:justify">
+<<<<<<< HEAD
                           {{ dpt_mission }}
                       <!-- <strong>1.</strong> provide quality academic environment that would help the students to acquire knowledge in computer science concepts.<br />
                       <strong>2.</strong> motivate faculty to disseminate knowledge to different levels.<br />
                       <strong>3.</strong> produce competent graduates who can develop algorithms and systems to the target groups. -->
                         </p> 
+=======
+                          {{mission_desc}}
+                     </p> 
+>>>>>>> b1d63829f551a509ba318d00a65bd90520948ef6
                       </v-layout>
                     </v-card-text>
                   </v-card>
@@ -192,8 +213,13 @@
                 <v-flex mb-3 >
                   <center>
                 <div data-aos="fade-left">
+<<<<<<< HEAD
                 <div class="promob" style="height:200px;width:200px" >
                   <v-img src="http://skct.edu.in/SKCT-CSE/images/staffs/balamurugan.gif" alt="Vuetify.js"></v-img>
+=======
+                <div class="promob" >
+                  <v-img :src="alumni_image"></v-img>
+>>>>>>> b1d63829f551a509ba318d00a65bd90520948ef6
                 </div>
                 </div>
                   </center>
@@ -201,8 +227,13 @@
               
              <div data-aos="fade-right">
                <v-flex text-xs-center >
+<<<<<<< HEAD
               <div class="white--text" style="align:justify;font-size:20px">{{ dpt_thought }}<br /></div>
              <br /><div class="subheading">{{ dpt_thought_name }}</div>
+=======
+              <h2 class="white--text">{{alumni_quote}}<br /></h2>
+             <div class="subheading">-{{alumni_name}}}</div>
+>>>>>>> b1d63829f551a509ba318d00a65bd90520948ef6
             </v-flex>
              </div>
              </v-layout>
@@ -561,9 +592,9 @@
                   <div data-aos="fade-right" data-aos-duration="5000">
             <v-carousel height="200px" hide-delimiters>
                 <v-carousel-item
-                v-for="(item,i) in items3"
+                v-for="(item,i) in items"
                 :key="i"
-                :src="item.src"
+                :src="item"
                 ></v-carousel-item>
             </v-carousel>
             <v-flex text-xs-center>
@@ -577,9 +608,9 @@
                   <div data-aos="fade-left" data-aos-duration="5000">
             <v-carousel height="400px" hide-delimiters>
                 <v-carousel-item
-                v-for="(item,i) in items3"
+                v-for="(item,i) in items"
                 :key="i"
-                :src="item.src"
+                :src="item"
                 ></v-carousel-item>
             </v-carousel>
              <v-flex text-xs-center>
@@ -587,19 +618,40 @@
             </v-flex>
             </div>
               </v-container>
+<<<<<<< HEAD
             </v-flex> 
             <fv :hod_name="fv_name" :hod_email="fv_email" :hod_no="fv_no" :hod_dept="fv_dept" ></fv>
+=======
+            </v-flex>
+
+            <!-- <v-btn
+              color="blue"
+              dark
+              fixed=""
+              class="mb-5"
+              bottom
+              right
+              fab
+            >
+              <v-icon>keyboard_arrow_up</v-icon>
+            </v-btn>  -->
+
+
+            <fv :nme="hod_name" :dep="hod_dept" :email="hod_email" :no="hod_no"></fv>
+
+>>>>>>> b1d63829f551a509ba318d00a65bd90520948ef6
 <footnav></footnav>
        
  </v-app>
 </template>
 
 <script>
-import toolbar from './toolbar.vue'
+// import toolbar from './toolbar.vue'
 import fv from './fv'
 import 'bootstrap'
 import "bootstrap/dist/css/bootstrap.min.css"
 import footnav from './footnav.vue'
+<<<<<<< HEAD
 import countTo from 'vue-count-to'
 import ICountUp from 'vue-countup-v2'
 import 'swiper/dist/css/swiper.css'
@@ -610,10 +662,18 @@ import pdf from 'vue-pdf'
 export default {
     components: {
      toolbar,footnav,fv,ICountUp,countTo,swiper,swiperSlide,pdf
+=======
+import axios from 'axios'
+
+export default {
+    components: {
+     footnav,fv
+>>>>>>> b1d63829f551a509ba318d00a65bd90520948ef6
   },
 
    data(){
        return{
+<<<<<<< HEAD
          title: '- CSE DEPARTMENT',
          fv_name: "a.balamurugan",
          fv_email: "sethu1471@gmail.com",
@@ -682,6 +742,40 @@ export default {
           separator: ',',
 
           decimal: '.',
+=======
+         bgimage: '',
+         about_desc: '',
+         vision_desc: '',
+         mission_desc : '',
+         alumni_image:'',
+         alumni_quote: '',
+         alumni_name: '',
+         hod_name:'',
+         hod_dept:'',
+         hod_email:'',
+         hod_no:'',
+        //bgimage: 'https://petapixel.com/assets/uploads/2019/02/mooncompositemain-800x800.jpg',
+ //bgimage:'172.20.10.4:8000/media/image/ambulance_Bk8gYnG.jpg/',
+        title: '- CSE DEPARTMENT',
+        colors: [
+        'green',
+        'secondary',
+        'yellow darken-4',
+        'red lighten-2',
+        'orange darken-1',
+      ],
+      items:[
+'https://petapixel.com/assets/uploads/2019/02/mooncompositemain-800x800.jpg',
+      ],
+      cycle: false,
+      slides: [
+        'First',
+        'Second',
+        'Third',
+        'Fourth',
+        'Fifth',
+      ],
+>>>>>>> b1d63829f551a509ba318d00a65bd90520948ef6
 
           prefix: '',
 
@@ -727,28 +821,57 @@ export default {
            { title : "Achievements",sub:['Department','Faculty','Student']},
            { title: "Placement Statitcs",sub:['2014-2015','2015-2016','2016-2017','2017-2018','2018-2019','2019-2020']}
            ],
-      items3: [
-          {
-            src: 'http://skct.edu.in/SKCT-CSE/images/slider/3.jpg'
-          },
-          {
-            src: 'http://skct.edu.in/SKCT-CSE/images/slider/4.jpg'
-          },
-          {
-            src: 'http://skct.edu.in/SKCT-CSE/images/slider/5.jpg'
-          },
-          {
-            src: 'http://skct.edu.in/SKCT-CSE/images/slider/4.jpg'
-          }
-        ],
+      
+
         value:0,
         show: true,
 
 }
-
 },
+<<<<<<< HEAD
    }
   
+=======
+
+mounted(){
+
+  console.log("mounted!");
+  axios.get("http://172.20.10.4:8000/cse/home/")
+  .then(res => {
+    console.log(res);
+    this.bgimage = "http://172.20.10.4:8000"+res.data.alumni_image+'/'
+    
+    //console.log(this.bgimage);
+    this.about_desc = res.data.about;
+    //console.log(this.about_desc);
+    this.vision_desc = res.data.vision;
+    this.mission_desc = res.data.mission;
+    this.alumni_quote = res.data.alumni_quote;
+    this.alumni_name = res.data.alumni_name;
+    this.alumni_image = "http://172.20.10.4:8000"+res.data.bg_img+'/';
+    this.items = res.data.gallery
+
+    for(let i = 0; i < this.items.length; i++){
+
+      this.items[i] = "http://172.20.10.4:8000"+this.items[i]+'/';
+
+}
+    this.items.forEach((e)=>{
+      console.log(e);
+    });
+
+    this.hod_name=''
+    this.hod_dept=''
+    this.hod_email=''
+    this.hod_no=''
+
+  })
+  .catch(e => {
+    console.log(e);
+  });
+  },
+}
+>>>>>>> b1d63829f551a509ba318d00a65bd90520948ef6
 
 </script>
 
