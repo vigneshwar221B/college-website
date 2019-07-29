@@ -1,7 +1,7 @@
    <template>
   <v-footer
     height="auto"
-    color="indigo accent-3"
+    color="indigo accent-4"
   >
 
     <v-layout
@@ -98,16 +98,17 @@
                        </v-list-tile-content>
                    </div>
       </v-flex>
-      <v-divider></v-divider>
+      
        <v-flex
         indigo accent-4
         py-3 px-2
         text-xs-center
         white--text
         xs12
-      >
-      The College undertakes to the regulations of UGC notified from time to time. © All Rights Reserved-2019,SKCT.<br>
-      Copyright © 2019,SKCT-Code Alchemist.
+      ><v-divider></v-divider>
+
+      <p>The College undertakes to the regulations of UGC notified from time to time. © All Rights Reserved-2019,SKCT.<br>
+      Copyright © 2019.</p>
       </v-flex>
     </v-layout>
   </v-footer>

@@ -4,15 +4,15 @@
     <v-content>
     <v-toolbar fixed height="57" flat="" dark app class="indigo accent-4 hidden-sm-and-down">
       <v-toolbar-side-icon @click="$router.push('/index')"><img class="image" width="40px" src="../assets/cn2.png" ></v-toolbar-side-icon>
-      <v-toolbar-title>SKCT  {{ title }}</v-toolbar-title>
+      <v-toolbar-title>SKCT  {{ tool_name }}</v-toolbar-title>
        <v-divider
             class="mx-3"
             inset
             vertical
             ></v-divider>
-      <v-toolbar-items>
-              
+      <v-toolbar-items>  
             <v-btn flat>ADMISSION</v-btn>
+            <v-btn flat @click="$router.push('/facilities')">FACILITIES</v-btn>
             <v-btn @click="$router.push('/coe')"  flat>COE</v-btn>
             <v-btn flat>Skct @ Glance</v-btn>
                <v-menu class="py-5" open-on-hover bottom  offset-y offset-overflow>
@@ -26,9 +26,9 @@
             </template>
             <v-list>
                 <v-list-tile
-                v-for="(item, index) in itemsalumini"
+                v-for="(item) in itemsalumini"
                  router :to="item.route"
-                :key="index"
+                :key="item"
                 >
                 <v-list-tile-title>{{ item.title }}</v-list-tile-title>
                 </v-list-tile>
@@ -46,11 +46,11 @@
             </template>
             <v-list>
                 <v-list-tile
-                v-for="(item, index) in items"
-                 router :to="item.route"
-                :key="index"
+                v-for="(item1) in items"
+                 router :to="item1.route"
+                :key="item1"
                 >
-                <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+                <v-list-tile-title>{{ item1.title }}</v-list-tile-title>
                 </v-list-tile>
             </v-list>
           </v-menu>
@@ -65,11 +65,11 @@
             </template>
             <v-list>
                 <v-list-tile
-                v-for="(item, index) in itemsus"
-                 router :to="item.route"
-                :key="index"
+                v-for="item2 in itemsus"
+                 router :to="item2.route"
+                :key="item2"
                 >
-                <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+                <v-list-tile-title>{{ item2.title }}</v-list-tile-title>
                 </v-list-tile>
             </v-list>
           </v-menu>
@@ -90,11 +90,11 @@
             </template>
             <v-list>
                 <v-list-tile
-                v-for="(item, index) in items1"
-                :key="index"
-                 router :to="item.route"
+                v-for="item3 in items1"
+                :key="item3"
+                 router :to="item3.route"
                 >
-                <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+                <v-list-tile-title>{{ item3.title }}</v-list-tile-title>
                 </v-list-tile>
             </v-list>
           </v-menu>
@@ -105,9 +105,9 @@
 
     <!-- mobile -->
     <v-flex hidden-md-and-up>
-    <v-toolbar dark="" class="indigo accent-3" fixed flat>
+    <v-toolbar dark class="indigo accent-3" fixed flat>
         <v-toolbar-side-icon @click.stop="drawer = !drawer"  ><img src="../assets/cn2.png"  width="40px" alt=""></v-toolbar-side-icon>
-        <v-toolbar-title >SKCT - {{ title }}</v-toolbar-title>
+        <v-toolbar-title ><strong>SKCT {{ tool_name }}</strong></v-toolbar-title>
     </v-toolbar>
     <v-navigation-drawer
       v-model="drawer"
@@ -120,59 +120,59 @@
       <img width="60px" class="icn"  src="../assets/cn2.png" > <h3><strong>@SKCT</strong></h3>
     </v-flex>
     <v-list>
-        <v-list-tile v-for="item in top" :key="item"  router :to="item.route">
+        <v-list-tile v-for="item4 in top" :key="item4"  router :to="item4.route">
             <v-list-tile-action>
                     <v-icon color="blue">star</v-icon>
                     </v-list-tile-action>
                 <v-list-tile-content>
-                    <v-list-tile-title>{{ item.tit }}</v-list-tile-title>
+                    <v-list-tile-title>{{ item4.tit }}</v-list-tile-title>
                 </v-list-tile-content>
         </v-list-tile>
     </v-list>
      <v-expansion-panel >
     <v-expansion-panel-content
-      v-for="(item,i) in eg"
-      :key="i"
+      v-for="item5 in eg"
+      :key="item5"
     >
       <template v-slot:header>
          <v-flex py-2 text-xs-center>
-       <h3><strong>{{ item.title }}</strong></h3>
+       <h3>{{ item5.title }}</h3>
     </v-flex>
       </template>
       <v-card>
          <v-list-tile
-          v-for="iteem in item.sub "
-          :key="iteem" router :to="iteem.route"
+          v-for="item6 in item5.sub "
+          :key="item6" router :to="item6.route"
         >
         <v-list-tile-action>
-              <v-icon color="blue">{{ iteem.icon }}</v-icon>
+              <v-icon color="blue">{{ item6.icon }}</v-icon>
             </v-list-tile-action>
           <v-list-tile-content wrap>
-            <v-list-tile-title>{{ iteem.dis }}</v-list-tile-title>
+            <v-list-tile-title>{{ item6.dis }}</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
         </v-card>
     </v-expansion-panel-content>
      <v-expansion-panel-content
-      v-for="(item,i) in dep"
-      :key="i"
+      v-for="item7 in dep"
+      :key="item7"
       v-show="show"
     >
       <template v-slot:header>
          <v-flex py-2 text-xs-center>
-       <h3><strong>{{ item.title }}</strong></h3>
+       <h3>{{ item7.title }}</h3>
     </v-flex>
       </template>
       <v-card>
          <v-list-tile
-          v-for="iteem in item.sub "
-          :key="iteem" router :to="iteem.route"
+          v-for="item8 in item7.sub "
+          :key="item8" router :to="item8.route"
         >
         <v-list-tile-action>
-              <v-icon color="blue">{{ iteem.icon }}</v-icon>
+              <v-icon color="blue">{{ item8.icon }}</v-icon>
             </v-list-tile-action>
           <v-list-tile-content wrap>
-            <v-list-tile-title>{{ iteem.dis }}</v-list-tile-title>
+            <v-list-tile-title>{{ item8.dis }}</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
         </v-card>
@@ -186,14 +186,15 @@
 
 <script>
 export default {
-  props:[ 'title','show'],
+  props:[ 'tool_name','show'],
      data () {
       return {
         drawer: false,
-        
+       
         top:[
           { tit:"Home"},
           { tit: "Coe",route:"/coe"},
+          { tit: "facilities",route:"/facilities"},
           { tit: "Skct @Glance"},
           { tit: "Admission"}
         ],
@@ -212,7 +213,7 @@ export default {
       ],
      itemsus: [
             { title: "overview",route:'/overview'},
-            { title: "management"}            
+            { title: "management",route:'/management'}            
       ],
        itemsalumini: [
             { title: "Event"},
@@ -227,7 +228,7 @@ export default {
             { title: "Contact", icon: "phone",route: "/contact"}            
       ],
       dep:[
-         { title:"Department",show:false, sub:[
+            { title:"Department",show:false, sub:[
             { dis:"Home",route: "/",icon: "school"},
             { dis: "Faculty",route: "/Faculty",icon: "school"},
             { dis: "Laboratory",route: "/lab",icon: "school"},
@@ -256,7 +257,7 @@ export default {
         ]},
         { title: "About Us", sub:[
           { dis: "overview",icon: "360",route:'/overview'},
-          { dis : "management",icon: "360"}
+          { dis : "management",icon: "360",route:'/management'}
         ]},
         
       ],
@@ -266,7 +267,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .icn:hover{
   transform: scale(1.2)
 }

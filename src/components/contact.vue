@@ -1,6 +1,7 @@
 <template>
 <v-app>
     <toolbar  :title="title" :show="true"></toolbar>
+    <v-img src="http://skct.edu.in/v1/images/bg6.png">
     <v-container>
       <v-flex>
         <v-flex my-3 text-xs-center display-1 orange--text>MESSAGE US !!</v-flex>
@@ -126,10 +127,7 @@
   </v-stepper>
       </v-flex>
     </v-container>
-      
-
-
-    <fv></fv>
+    </v-img>
 </v-app>
 </template>
 

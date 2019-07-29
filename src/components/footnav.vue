@@ -8,15 +8,15 @@
     <div  v-for="(item, index) in items1mob"
                 :key="index"
                  >  
-                 <v-btn
-        color="indigo accent-4"
-        flat
-         router :to="item.route"
-        value="recent"
-      >
-        <span>{{ item.title }}</span>
-        <v-icon>{{ item.icon }}</v-icon>
-      </v-btn>
+                  <v-btn
+                  color="blue"
+                  flat
+                  :to="item.route"
+                  style="text-decoration:none;"
+                  >
+                  <span>{{ item.title }}</span>
+                  <v-icon>{{ item.icon }}</v-icon>
+                </v-btn>
     </div>
     </v-bottom-nav>
 </template>
@@ -25,7 +25,7 @@
 export default {
     data(){
         return{
-               items1mob: [
+           items1mob: [
             { title: "Home", icon: "home",route: "/"},
             { title: "Faculty", icon: "person",route: "/Faculty"},
             { title: "Laboratory", icon: "android",route: "/lab"},

@@ -11,6 +11,8 @@ import event_page from '@/components/event_page.vue'
 import coe from '@/components/coe.vue'
 import index from '@/components/index.vue'
 import overview from '@/components/overview.vue'
+import facilities from '@/components/facilities.vue'
+import management from '@/components/management.vue'
 
 Vue.use(Router)
 
@@ -22,19 +24,29 @@ export default new Router({
       component: index
     },
     {
+      path: '/management',
+      name: 'management',
+      component: management
+    },
+    {
+      path: '/facilities',
+      name: 'facilities',
+      component: facilities
+    },
+    {
       path: '/overview',
       name: 'overview',
       component:overview
     },
     {
-      path: '/',
-      name: 'dp',
-      component: dp
-    },
-    {
       path: '/coe',
       name: 'coe',
       component: coe
+    },
+    {
+      path: '/',
+      name: 'dp',
+      component: dp
     },
     {
       path: '/gallery',
